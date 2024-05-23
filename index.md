@@ -1,8 +1,13 @@
 ---
-layout: page
+layout: default
 title: KU Supercomputing Club
 description: Supercomputing, dood!
 ---
+<h1>KU Supercomputing Club</h1>
+We are currently
+
+![IMAGE](UNDER_CONSTRUCTION.png)
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 Duis aute irure dolor in reprehenderit in voluptate velit ubercomputer esse cillum dolore eu fugiat nulla pariatur. 
