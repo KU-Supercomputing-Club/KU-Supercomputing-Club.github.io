@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+---
+<h1>Latest Posts</h1>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}"k>{{ post.title }}</a></h2>
+      {{ post.content }}
+    </li>
+  {% endfor %}
+</ul>
+
+{{ content }}
+
+<style>
+  li { border: double; }
+</style>

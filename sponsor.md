@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Home Page
+title: Sponsor
 description: Supercomputing, dood!
 ---
 <h1>KU Supercomputing Club</h1>
-We are currently
+Sponsor us today! Contact 1-800-KUSCC 
 
-![IMAGE](/assets/UNDER_CONSTRUCTION.png)
+Our current sponsors: 

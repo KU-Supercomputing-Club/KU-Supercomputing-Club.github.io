@@ -1,0 +1,21 @@
+---
+layout: default
+title: Projects
+description: Supercomputing, dood!
+---
+<h1>Projects</h1>
+
+<ul>
+  {% for file in site.projects %}
+    <li>
+      <h2><a href="{{ file.url }}"k>{{ file.title }}</a></h2>
+      {{ file.content }}
+    </li>
+  {% endfor %}
+</ul>
+
+{{ content }}
+
+<style>
+  li { border: double; }
+</style>
