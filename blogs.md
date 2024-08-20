@@ -1,6 +1,21 @@
 ---
-layout: blogs
+layout: default
 title: Blogs
 description: Supercomputing, dood!
 ---
+<h1>Blogs</h1>
 
+<ul>
+  {% for file in site.blogs %}
+    <li>
+      <h2><a href="{{ file.url }}"k>{{ file.title }}</a></h2>
+      {{ file.content }}
+    </li>
+  {% endfor %}
+</ul>
+
+{{ content }}
+
+<style>
+  li { border: double; }
+</style>
