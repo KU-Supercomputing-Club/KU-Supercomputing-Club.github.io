@@ -2,5 +2,6 @@
 layout: post
 author: dork2
 ---
-![IMAGE](/assets/missing_image.png)
+<img src="missing_image.png" alt="image" width=50%/>
+<br>
 AAA
