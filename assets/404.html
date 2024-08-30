@@ -1,0 +1,22 @@
+---
+layout: page
+title: "404: Page not found"
+permalink: /404.html
+
+redirect_from:
+- /norobots/
+- /assets/
+- /posts/
+---
+{% include lang.html %}
+
+<p class="lead">{{ site.data.locales[lang].not_found.statement }}</p>
+
+<h1>Redirecting to <a href="/">Home...</a></h1>
+<img src="https://images7.memedroid.com/images/UPLOADED577/61b6add70a737.jpeg" alt="404 Image">
+
+<script>
+  setTimeout(function () {
+    window.location.href = '/';
+  }, 2000);
+</script>
