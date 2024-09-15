@@ -1,5 +1,9 @@
 #  The contact options.
 
+- type: discord
+  icon: "fab fa-discord"
+  url: https://discord.gg/B44KXmTa
+
 - type: github
   icon: "fab fa-github"
 
