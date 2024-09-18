@@ -9,8 +9,8 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: 
-  alt: 
+  path: https://ku-supercomputing-club.github.io/assets/img/commons/ksc_logo.png
+  alt: ksc
 ---
 
 #Introduction
