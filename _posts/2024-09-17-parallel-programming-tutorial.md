@@ -54,6 +54,7 @@ module load openmpi
 
 ## Application
 Matrix-matrix multiplication arises in many engineering and computing applications. Below is example serial code that computes a matrix-matrix multiplication:
+# **`matmul.py`**
 ```python
 import numpy as np
 from time import time
@@ -72,23 +73,7 @@ print("Serial time:",end-start)
 ```
 
 Below is one way of parallelizing matrix multiplcation across a cluster:
-```python
-import numpy as np
-from time import time
-import sys
-
-
-dimX=int(sys.argv[1])
-dimY=int(sys.argv[2])
-A=np.random.rand(dimX,dimX)
-x=np.random.rand(dimX,dimY)
-start=time()
-b=A@x
-end=time()
-print("Serial time:",end-start)
-
-```
-
+# **`mpi_matmul.py`**
 ```python
 from mpi4py import MPI
 import numpy as np
@@ -163,6 +148,7 @@ if rank==0:
 ```
 
 To execute this MPI program with specific node/core arrangements, you need to write a sbatch script. Below is an example sbatch script that runs a scaling test on up to 16 nodes:
+# **`mpi_matmul.sh`**
 ```bash
 #!/bin/bash
 
@@ -191,5 +177,5 @@ mpirun --mca btl self,tcp -n 16 python3 mpi_matmul.py $dimX $dimY
 
 You can execute this sbatch script by typing the following into your terminal:
 ```bash
-sbatch your_script.sh
+sbatch mpi_matmul.sh
 ```
