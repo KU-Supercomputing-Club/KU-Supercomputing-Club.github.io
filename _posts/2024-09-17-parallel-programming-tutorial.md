@@ -13,7 +13,7 @@ image:
   alt: ksc
 ---
 
-# Introduction
+### Introduction
 This is a very quick, hands-on lab showcasing parallel programming with Message Passing Interface (MPI).
 
 MPI is a very powerful tool for parallel programming across a network of multi-core systems. MPI can be used in many programming languages, such as C/C++, Python, Octave, etc. This tutorial will use Python via the [mpi4py](https://mpi4py.readthedocs.io/en/stable/) module.
@@ -52,7 +52,7 @@ source mpi_tutorial/bin/activate
 module load openmpi
 ```
 
-## Basic MPI Usage
+### Basic MPI Usage
 Below are a few commonly used MPI commands in action: 
 # **`test.py`**
 ```python
@@ -102,8 +102,10 @@ If you want to execute this, type the following into your terminal:
 mpirun --mca btl self,tcp -n 4 python3 test.py
 ```
 
-## Application
-Matrix-matrix multiplication arises in many engineering and computing applications. Below is example serial code that computes a matrix-matrix multiplication:
+### Application
+Matrix-matrix multiplication arises in many engineering and computing applications. For this tutorial, we will consider solving $Ax=b$, where we are solving for \(b\).
+
+Below is example serial code that computes a matrix-matrix multiplication:
 # **`matmul.py`**
 ```python
 import numpy as np
