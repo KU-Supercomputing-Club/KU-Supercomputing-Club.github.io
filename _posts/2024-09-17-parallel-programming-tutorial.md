@@ -103,7 +103,7 @@ mpirun --mca btl self,tcp -n 4 python3 test.py
 ```
 
 ### Application
-Matrix-matrix multiplication arises in many engineering and computing applications. For this tutorial, we will consider solving $Ax=b$, where we are solving for \(b\).
+Matrix-matrix multiplication arises in many engineering and computing applications. For this tutorial, we will consider solving $Ax=b$, where we are solving for $b$.
 
 Below is example serial code that computes a matrix-matrix multiplication:
 # **`matmul.py`**
