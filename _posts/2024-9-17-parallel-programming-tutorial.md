@@ -13,7 +13,7 @@ image:
   alt: 
 ---
 
-#Introduction
+# Introduction
 This is a very quick, hands-on lab showcasing parallel programming with Message Passing Interface (MPI).
 
 MPI is a very powerful tool for parallel programming across a network of multi-core systems. MPI can be used in many programming languages, such as C/C++, Python, Octave, etc. This tutorial will use Python via the [mpi4py](https://mpi4py.readthedocs.io/en/stable/) module.
@@ -41,7 +41,18 @@ We can now start installing dependencies for our Python programs in this environ
 pip3 install mpi4py
 ```
 
-##Application
+Lastly, we will need to execute our MPI program via mpirun, which is available in the openmpi module:
+```bash
+module load openmpi
+```
+
+We are done with the initial setup! If you ever exit and enter your session again, you will need to execute the following again (no need to make the mpi_tutorial folder, create an environment, or install mpi4py again):
+```bash
+source mpi_tutorial/bin/activate
+module load openmpi
+```
+
+## Application
 Matrix-matrix multiplication arises in many engineering and computing applications. Below is example serial code that computes a matrix-matrix multiplication:
 ```python
 import numpy as np
@@ -149,4 +160,36 @@ comm.Gatherv(localb,(b,num_rows_per_rank*dimY),root=0)
 if rank==0:
         end=time()
         print("Parallel time:",end-start)
+```
+
+To execute this MPI program with specific node/core arrangements, you need to write a sbatch script. Below is an example sbatch script that runs a scaling test on up to 16 nodes:
+```bash
+#!/bin/bash
+
+#SBATCH --partition=intel # Partition Name (Required)
+#SBATCH --ntasks-per-node=1 # Number of cores
+#SBATCH --nodes=16 # Number of nodes
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=50g # Job memory request
+#SBATCH --time=0-08:00:00 # Time limit days-hrs:min:sec
+#SBATCH --output=mpi_test\_%j.log # Standard output and error log
+
+dimX=20000
+dimY=200
+
+echo 1
+python3 matmul.py $dimX $dimY
+echo 2
+mpirun --mca btl self,tcp -n 2 python3 mpi_matmul.py $dimX $dimY
+echo 4
+mpirun --mca btl self,tcp -n 4 python3 mpi_matmul.py $dimX $dimY
+echo 8
+mpirun --mca btl self,tcp -n 8 python3 mpi_matmul.py $dimX $dimY
+echo 16
+mpirun --mca btl self,tcp -n 16 python3 mpi_matmul.py $dimX $dimY
+```
+
+You can execute this sbatch script by typing the following into your terminal:
+```bash
+sbatch your_script.sh
 ```
