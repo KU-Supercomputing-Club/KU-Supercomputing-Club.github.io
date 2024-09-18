@@ -36,20 +36,70 @@ Now, let's enter our environment:
 source mpi_tutorial/bin/activate
 ```
 
-We can now start installing dependencies for our Python programs in this environment. We only need mpi4py, so lets install that in our environment:
-```bash
-pip3 install mpi4py
-```
-
-Lastly, we will need to execute our MPI program via mpirun, which is available in the openmpi module:
+We will also need to execute our MPI program via mpirun and load the MPI library, which is available in the openmpi module:
 ```bash
 module load openmpi
+```
+
+Lastly, we can now start installing dependencies for our Python programs in this environment. We only need mpi4py, so lets install that in our environment:
+```bash
+pip3 install mpi4py
 ```
 
 We are done with the initial setup! If you ever exit and enter your session again, you will need to execute the following again (no need to make the mpi_tutorial folder, create an environment, or install mpi4py again):
 ```bash
 source mpi_tutorial/bin/activate
 module load openmpi
+```
+
+## Basic MPI Usage
+Below are a few commonly used MPI commands in action: 
+# **`test.py`**
+```python
+
+from mpi4py import MPI
+import numpy as np
+
+comm = MPI.COMM_WORLD
+rank = comm.Get_rank()
+size = comm.Get_size()
+
+#Halo-exchange of rank values via sent/recv
+comm.send(rank,dest=(rank+1)%size)
+val=comm.recv()
+comm.barrier()
+print("rank =",rank,"recieved",val)
+
+#Broacast data from last rank to all ranks
+arr_size=10
+data=np.empty(arr_size,dtype=int)
+#Each rank has a local 10-element array filled with their rank value
+for i in range(arr_size):
+        data[i]=rank
+print("Before bcast: rank =",rank,data)
+#Now we broadcast from the last rank to all ranks. All ranks should only have arrays filled with size-1
+data=comm.bcast(data,root=size-1)
+print("After bcast: rank =",rank,data)
+
+#Reduction operation: even ranks store 2/(size/2) at even indices, odd ranks store 1(size/2) at odd indices, then sum all contributions to get [2,1,2,1...
+local_data=np.zeros(arr_size,dtype=np.float64)
+data=np.zeros(arr_size,dtype=np.float64)
+if rank%2==0:
+        for i in range(0,arr_size,2):
+                local_data[i]=2/(size/2)
+else:
+        for i in range(1,arr_size,2):
+                local_data[i]=1/(size/2)
+comm.barrier()
+print("Before allreduce: rank =",rank,local_data)
+comm.Allreduce([local_data,MPI.DOUBLE],[data,MPI.DOUBLE],op=MPI.SUM)
+print("After allreduce: rank =",rank,data)
+
+```
+
+If you want to execute this, type the following into your terminal:
+```bash
+mpirun --mca btl self,tcp -n 4 python3 test.py
 ```
 
 ## Application
