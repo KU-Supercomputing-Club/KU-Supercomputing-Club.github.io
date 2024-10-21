@@ -1,7 +1,7 @@
 ---
 title: "GNN-RL: Revolutionizing HPC Scheduling with AI"
 description: Presentation by Kyrian Adimora on the groundbreaking approach to HPC scheduling using Graph Neural Networks and Reinforcement Learning.
-author: kyrian-adimora
+author: abir
 date: 2024-10-21 10:00:00 +0000
 categories: [Presentations, HPC]
 tags: [HPC, AI, GNN, RL, Scheduling]
@@ -13,7 +13,7 @@ image:
 
 ## Presentation Summary
 
-In the ever-evolving landscape of High-Performance Computing (HPC), efficient resource management remains a critical challenge. My presentation introduces a groundbreaking approach to HPC scheduling that harnesses the power of Graph Neural Networks (GNNs) and Reinforcement Learning (RL) to dramatically improve system performance.
+In the ever-evolving landscape of High-Performance Computing (HPC), efficient resource management remains a critical challenge. [Kyrian Adimora](https://www.linkedin.com/in/kyrian-adimora-2b111a205/)'s presentation introduces a groundbreaking approach to HPC scheduling that harnesses the power of Graph Neural Networks (GNNs) and Reinforcement Learning (RL) to dramatically improve system performance.
 
 ## Key Highlights
 
@@ -25,7 +25,7 @@ In the ever-evolving landscape of High-Performance Computing (HPC), efficient re
 
 This research represents a significant leap forward in HPC resource management, promising to accelerate scientific discoveries across various fields, from climate modeling to drug discovery.
 
-## Images/Figures from the Presentation
+## Images from the Presentation
 
 ### Overview of HPC Scheduling
 
@@ -43,41 +43,15 @@ This research represents a significant leap forward in HPC resource management, 
 
 ![Kyrian Adimora](../assets/img/posts/2024-10-21-kyrian/kyrian-adimora-headshot.png){: width="250" height="150" .w-30 .left}
 
-### Kyrian C. Adimora, B.Eng. (Hons), M.Eng.
+### Kyrian C. Adimora
 **Student Member, IEEE & ACM**  
 **Ph.D. Candidate, Computer Science**  
 **University of Kansas**
 
-#### Research Focus
-Kyrian C. Adimora is a Ph.D. candidate in Computer Science at the University of Kansas, specializing in the convergence of High-Performance Computing (HPC) and Artificial Intelligence. Under the mentorship of Dr. Sun Hongyang, his research aims to enhance weather prediction accuracy through AI-optimized HPC systems.
+Kyrian Adimora is currently a Ph.D. candidate in Computer Science at the University of Kansas, where he focuses on the intersection of High-Performance Computing (HPC) and Artificial Intelligence. His academic journey began with a Bachelor's degree in Computer Engineering, awarded with First Class Honors from Michael Okpara University of Agriculture, Umudike, Nigeria. He furthered his studies by obtaining a Master's degree in Computer Engineering from the same institution. Additionally, he holds a Postgraduate Diploma in Information Management Technology from the Federal University of Technology, Owerri, and a Higher National Diploma with Distinction in Electrical Electronics Engineering from Federal Polytechnics Nekede.
 
-#### Education
-- **Ph.D. Candidate**, Computer Science, University of Kansas
-- **M.Eng.**, Computer Engineering, Michael Okpara University of Agriculture, Umudike, Nigeria
-- **B.Eng. (First Class Honors)**, Computer Engineering, Michael Okpara University of Agriculture, Umudike, Nigeria
-- **Postgraduate Diploma**, Information Management Technology, Federal University of Technology, Owerri
-- **Higher National Diploma (Distinction)**, Electrical Electronics Engineering, Federal Polytechnics Nekede
+Adimora has served as a Lecturer at Michael Okpara University of Agriculture, Umudike, where he contributed to the academic development of students in engineering disciplines. He also held the position of Director of ICT at Eastern Palm University (now Kingsley Ozumba Mbadiwe University) from 2018 to 2019, where he managed the university's information and communication technology initiatives.
 
-#### Professional Experience
-- **Lecturer**, Michael Okpara University of Agriculture, Umudike
-- **Director of ICT**, Eastern Palm University (now Kingsley Ozumba Mbadiwe University), 2018-2019
+His research interests include High-Performance Computing, Artificial Intelligence, Machine Learning, Cloud Computing, and IoT/Mobile Security. 
 
-#### Research Interests
-- High-Performance Computing (HPC)
-- Artificial Intelligence (AI)
-- Machine Learning
-- Cloud Computing
-- IoT/Mobile Security
-
-#### Professional Affiliations
-- IEEE Computer Society
-- Association for Computing Machinery (ACM)
-- National Society of Black Engineers (NSBE)
-- American Association for the Advancement of Science (AAAS)
-- Council for the Regulation of Engineering in Nigeria (COREN)
-
-#### Roles and Responsibilities
-- Nominated IEEE Kansas City Education Activity Chair
-- Reviewer for multiple high-impact journals in the field
-
-Mr. Adimora's multidisciplinary background and ongoing research at the intersection of HPC and AI position him at the forefront of cutting-edge developments in computer science and engineering.
+Adimora is an active member of the IEEE Computer Society, Association for Computing Machinery (ACM), National Society of Black Engineers (NSBE), American Association for the Advancement of Science (AAAS), and the Council for the Regulation of Engineering in Nigeria (COREN). Notably, he has been nominated as the IEEE Kansas City Education Activity Chair and serves as a reviewer for multiple high-impact journals in his field.
