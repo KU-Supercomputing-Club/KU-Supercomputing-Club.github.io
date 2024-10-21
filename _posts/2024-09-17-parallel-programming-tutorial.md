@@ -5,7 +5,7 @@ author: abir
 date: 2024-09-17 17:00:00 +0000
 categories: [Programming, Tutorial]
 tags: [supercomputing, tutorial, programming]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:
