@@ -15,6 +15,7 @@ image:
 
 In the ever-evolving landscape of High-Performance Computing (HPC), efficient resource management remains a critical challenge. [Kyrian Adimora](https://www.linkedin.com/in/kyrian-adimora-2b111a205/)'s presentation introduces a groundbreaking approach to HPC scheduling that harnesses the power of Graph Neural Networks (GNNs) and Reinforcement Learning (RL) to dramatically improve system performance.
 
+Presentation on October 23rd at 5:30PM in Learned 1136.
 ## Key Highlights
 
 1. **Unveiling the limitations of traditional scheduling algorithms in modern HPC environments**
