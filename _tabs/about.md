@@ -5,5 +5,5 @@ order: 7
 ---
 The KU Supercomputing Club (KSC) was founded in 2024 with the mission of fostering an interest in high performance computing (HPC) at the University of Kansas. We aim to get as many students excited about HPC, regardless of their skills, background, or education! We have competed in multiple international cluster competitions, lead hands-on tutorials, and promote student-led projects.
 
-We look forward to seeing you at our next meeting! Please join our [Discord](https://discord.gg/B44KXmTa) to be a part of our amazing community of HPC fans and stay up-to-date with upcoming meetings!
+We look forward to seeing you at our next meeting! Please join our [Discord](https://discord.gg/cPzAkuNAmd) to be a part of our amazing community of HPC fans and stay up-to-date with upcoming meetings!
 
